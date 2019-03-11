@@ -33,7 +33,7 @@ public class ClienteTest {
 				"jperez@gmail.com", new BigDecimal("345"), medioPago);
 
 		// Imprimir a consola
-		System.out.println("Nombre:" + clienteC.getApellidoPer());
+		System.out.println("Apellido:" + clienteC.getApellidoPer());
 
 	}
 

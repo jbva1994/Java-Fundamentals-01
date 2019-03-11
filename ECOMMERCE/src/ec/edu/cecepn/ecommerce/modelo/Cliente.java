@@ -62,4 +62,34 @@ public class Cliente extends Persona {
 		return super.getApellidoPer().toUpperCase();
 	}
 
+	/**
+	 * @return the cuotaVenCli
+	 */
+	public BigDecimal getCuotaVenCli() {
+		return cuotaVenCli;
+	}
+
+	/**
+	 * @param cuotaVenCli the cuotaVenCli to set
+	 */
+	public void setCuotaVenCli(BigDecimal cuotaVenCli) {
+		this.cuotaVenCli = cuotaVenCli;
+	}
+
+	/**
+	 * @return the medioPago
+	 */
+	public MedioPago getMedioPago() {
+		return medioPago;
+	}
+
+	/**
+	 * @param medioPago the medioPago to set
+	 */
+	public void setMedioPago(MedioPago medioPago) {
+		this.medioPago = medioPago;
+	}
+	
+	
+
 }
