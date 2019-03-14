@@ -41,7 +41,7 @@ public class FrmMenuPrincipal {
 			FrmCliente frmCliente = new FrmCliente();
 			break;
 		case 2:
-			FrmTipoProducto frmTipPro = new FrmTipoProducto();
+			FrmTipoProducto frmTipoPro = new FrmTipoProducto();
 			break;
 		case 3:
 			FrmProducto frmProducto = new FrmProducto();
@@ -50,7 +50,7 @@ public class FrmMenuPrincipal {
 			FrmProveedor frmProveedor = new FrmProveedor();
 			break;
 		case 5:
-			FrmCarrito frmCompras = new FrmCarrito();
+			FrmCarrito frmCarrito = new FrmCarrito();
 			break;
 		case 6:
 			System.exit(0); // Acabar el programa
