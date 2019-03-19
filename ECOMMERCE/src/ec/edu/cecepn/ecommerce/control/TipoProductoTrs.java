@@ -53,7 +53,7 @@ public class TipoProductoTrs implements ICrud {
 			posEnc++;
 		}
 		/**************************************************/
-		
+
 		if (banEnc) {
 			MemoriaBdd.tipoProductos[posEnc] = (TipoProducto) registro;
 			return "Registro actualizado correctamente";
@@ -90,8 +90,33 @@ public class TipoProductoTrs implements ICrud {
 
 	@Override
 	public Object consultarPorId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		TipoProducto tipProEnc = null;
+		for (int i = 0; i < MemoriaBdd.tipoProductos.length; i++) {
+			if(MemoriaBdd.tipoProductos[i].getIdTipPro() == id) {
+				tipProEnc = MemoriaBdd.tipoProductos[i];
+				break;
+			}
+			
+		}
+		return tipProEnc;
+	}
+
+	/**
+	 * Metodo para imprimir los tipos de productos
+	 * 
+	 * @return
+	 */
+	public String imprimirListaFormateada() {
+		// Cuando quieran unir un monton de cadenas
+		StringBuilder tipoProLis = new StringBuilder();
+		for (TipoProducto tipProTmp : MemoriaBdd.tipoProductos) {
+			if (tipProTmp != null) {
+				tipoProLis.append(tipProTmp.getIdTipPro()).append("-").append(tipProTmp.getNombreTipPro())
+						.append(" !! ");
+			}
+
+		}
+		return tipoProLis.toString();
 	}
 
 }

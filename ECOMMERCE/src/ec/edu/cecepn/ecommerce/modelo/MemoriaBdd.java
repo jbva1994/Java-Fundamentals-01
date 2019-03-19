@@ -3,6 +3,8 @@
  */
 package ec.edu.cecepn.ecommerce.modelo;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -22,13 +24,20 @@ import java.util.Date;
  */
 public class MemoriaBdd {
 	/*
-	 * Cuando se coloca a una variable como static solamente se crea un espacio en memoria insdependientemente,
+	 * Cuando se coloca a una variable como static solamente se crea un espacio en memoria independientemente,
 	 * si crean n objetos. Ejm. Contador de pagina web
 	 */
 	private static Cliente[] clientes;
-	private static Producto[] productos;
 	public static Usuario[] usuarios;
+	
+	/************************************************/
+	//1. Se utilizó un arreglo
+	//1. Se utilizo un arreglo
 	public static TipoProducto[] tipoProductos;
+	//2. Se utilizo una coleccion de tipo Lista
+	public static ArrayList<Producto> productos;
+	/*************************************************/
+	
 	public static int contadorTipPro = 0;
 	
 	
@@ -43,13 +52,18 @@ public class MemoriaBdd {
 	static {
 		usuarios = new Usuario[4];
 		tipoProductos = new TipoProducto[5];
-		inicializarUsuarios(); // Solo se acepta métodos static
+		productos = new ArrayList<Producto>();
+		inicializar(); // Solo se acepta métodos static
 	}
 
-	private static void inicializarUsuarios() {
+	private static void inicializar() {
 		usuarios[0] = new Usuario("jvargas", "admin", new Date());
 		usuarios[1] = new Usuario("admin", "admin", new Date());
 		usuarios[2] = new Usuario("barcos", "admin", new Date());
+		
+		//productos.add(new Producto());
+		
+		
 	}
 	
 	/*

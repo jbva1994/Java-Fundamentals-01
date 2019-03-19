@@ -16,7 +16,7 @@ import java.util.Date;
  *         20 feb. 2019 - 19:47:46
  */
 public class Cliente extends Persona {
-	// Tipo de dato para estadisticos, finnacieros
+	// Tipo de dato para estadisticos, finacieros
 	private BigDecimal cuotaVenCli;
 	private MedioPago medioPago;
 

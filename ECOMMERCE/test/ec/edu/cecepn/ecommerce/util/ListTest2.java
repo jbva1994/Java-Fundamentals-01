@@ -10,17 +10,17 @@ import ec.edu.cecepn.ecommerce.modelo.MedioPago;
 import ec.edu.cecepn.ecommerce.modelo.TipoProducto;
 
 /**
- * Clase para ejemplificar el uso de collections
+ *Clase para ejemplificar el uso de collections
  * - Estructura con tamaño dinamico
  * - Almacenar multiples tipos de datos -> Mejora Generics - un solo tipo
  * - List, Set, Queue, las 3 son interfaces -> Especial no es colleccion -> Map
  * - java.util es el paquete
  * - Para utilizar se utiliza las implementaciones de cada una 
- * @author Joel
+ *@author jbva1994
  *
- * 11 mar. 2019 - 22:51:19
+ * 12 mar. 2019 - 19:40:25
  */
-public class ListTest {
+public class ListTest2 {
 	/*
 	 * Caracteristicas de las Listas:
 	 * - El orden no importa
@@ -35,7 +35,7 @@ public class ListTest {
 	private ArrayList<String> listaCadenas;
 	
 	
-	public ListTest() {
+	public ListTest2() {
 		// 2. Inicializar
 		this.listaValores = new ArrayList();
 		this.listaCadenasDos = new ArrayList<String>();
@@ -94,4 +94,5 @@ public class ListTest {
 		this.listaCadenas.add("Joel");
 	}
 	
+
 }
