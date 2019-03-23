@@ -102,10 +102,14 @@ public class ProductoTrs implements ICrudC {
 			throw new Exception("Código incorrecto!!");
 		}
 
-		for (Producto proTmp : MemoriaBdd.productos) {
-			if (proTmp.getIdPro() == idProEli) {
-				proEnc = proTmp;
+		try {
+			for (Producto proTmp : MemoriaBdd.productos) {
+				if (proTmp.getIdPro() == idProEli) {
+					proEnc = proTmp;
+				}
 			}
+		} catch (Exception e) {
+			throw new Exception("No se puede consultar revisar la inicialización de la tabla productos");
 		}
 		return proEnc;
 	}
