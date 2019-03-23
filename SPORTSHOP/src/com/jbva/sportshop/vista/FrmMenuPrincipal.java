@@ -29,10 +29,10 @@ public class FrmMenuPrincipal {
 		System.out.println("*************************************");
 		System.out.println("1. CLIENTES");
 		System.out.println("2. TIPO DE PRODUCTO");
-		System.out.println("3. PRODUCTO");
-		System.out.println("4. PROVEEDOR");
-		System.out.println("5. CARRITO");
-		System.out.println("6. SALIR");
+		System.out.println("3. PROVEEDOR");
+		System.out.println("4. PRODUCTO");
+		//System.out.println("5. CARRITO");
+		System.out.println("5. SALIR");
 		System.out.print("... Seleccione una opción:");
 		opcion = Integer.parseInt(UtilLectura.leerDesdeTeclado());
 		// Sentencias de decision - switch
@@ -44,15 +44,15 @@ public class FrmMenuPrincipal {
 			FrmTipoProducto frmTipoPro = new FrmTipoProducto();
 			break;
 		case 3:
-			FrmProducto frmProducto = new FrmProducto();
-			break;
-		case 4:
 			FrmProveedor frmProveedor = new FrmProveedor();
 			break;
-		case 5:
-			FrmCarrito frmCarrito = new FrmCarrito();
+		case 4:
+			FrmProducto frmProducto = new FrmProducto();
 			break;
-		case 6:
+		//case 5:
+		//FrmCarrito frmCarrito = new FrmCarrito();
+		//break;
+		case 5:
 			System.exit(0); // Acabar el programa
 
 		default:

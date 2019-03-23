@@ -21,6 +21,24 @@ public class TipoProducto {
 	public TipoProducto() {
 
 	}
+	
+	
+
+	/**
+	 * @param idTipoPro
+	 * @param nombreTipoPro
+	 * @param descripcionTipoPro
+	 * @param productos
+	 */
+	public TipoProducto(int idTipoPro, String nombreTipoPro, String descripcionTipoPro, List<Producto> productos) {
+		super();
+		this.idTipoPro = idTipoPro;
+		this.nombreTipoPro = nombreTipoPro;
+		this.descripcionTipoPro = descripcionTipoPro;
+		this.productos = productos;
+	}
+
+
 
 	/**
 	 * @return the idTipoPro
@@ -81,7 +99,7 @@ public class TipoProducto {
 	@Override
 	public String toString() {
 		return "TipoProducto [ID Tipo Producto=" + idTipoPro + ", Nombre Tipo Producto=" + nombreTipoPro
-				+ ", Descripcion Tipo Producto=" + descripcionTipoPro + ", Productos=" + productos + "]";
+				+ ", Descripcion Tipo Producto=" + descripcionTipoPro + "]";
 	}
 
 }

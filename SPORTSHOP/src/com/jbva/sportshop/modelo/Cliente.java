@@ -22,7 +22,7 @@ public class Cliente extends Persona {
 	 * 
 	 */
 	public Cliente() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	/**
@@ -97,6 +97,19 @@ public class Cliente extends Persona {
 	 */
 	public void setDireccionEnvio(String direccionEnvio) {
 		this.direccionEnvio = direccionEnvio;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Cliente [nombre= " + getNombre() + ", apellido= " + getApellido() + ", identificacion= "
+				+ getIdentificacion() + ", direccion= " + getDireccion()
+				+ ", telefono= " + getTelefono() + ", email= " + getEmail() + ",  id=" + id + ", tipoCliente="
+				+ tipoCliente + ", direccionEnvio=" + direccionEnvio + "]";
 	}
 
 }

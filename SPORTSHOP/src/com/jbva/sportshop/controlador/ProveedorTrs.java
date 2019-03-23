@@ -94,8 +94,33 @@ public class ProveedorTrs implements InterfazCRUD {
 
 	@Override
 	public Object consultarPorId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Proveedor provEnc = null;
+		for (int i = 0; i < BdMemoria.proveedores.length; i++) {
+			if(BdMemoria.proveedores[i].getIdProveedor()== id) {
+				provEnc = BdMemoria.proveedores[i];
+				break;
+			}
+			
+		}
+		return provEnc;
+	}
+	
+	/**
+	 * Metodo para imprimir los proveedores
+	 * 
+	 * @return
+	 */
+	public String imprimirListaFormateada() {
+		// Cuando quieran unir un monton de cadenas
+		StringBuilder provLis = new StringBuilder();
+		for (Proveedor provTmp : BdMemoria.proveedores) {
+			if (provTmp != null) {
+				provLis.append(provTmp.getIdProveedor()).append("-").append(provTmp.getNombreProv())
+						.append(" !! ");
+			}
+
+		}
+		return provLis.toString();
 	}
 
 }

@@ -6,6 +6,7 @@ package com.jbva.sportshop.controlador;
 import com.jbva.sportshop.modelo.BdMemoria;
 import com.jbva.sportshop.modelo.TipoProducto;
 
+
 /**
  * Clase que tendrá las operaciones de negocio relacionadas con tipo de producto
  * 
@@ -90,8 +91,33 @@ public class TipoProductoTrs implements InterfazCRUD {
 
 	@Override
 	public Object consultarPorId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		TipoProducto tipProEnc = null;
+		for (int i = 0; i < BdMemoria.tipoProductos.length; i++) {
+			if(BdMemoria.tipoProductos[i].getIdTipoPro() == id) {
+				tipProEnc = BdMemoria.tipoProductos[i];
+				break;
+			}
+			
+		}
+		return tipProEnc;
+	}
+	
+	/**
+	 * Metodo para imprimir los tipos de productos
+	 * 
+	 * @return
+	 */
+	public String imprimirListaFormateada() {
+		// Cuando quieran unir un monton de cadenas
+		StringBuilder tipoProLis = new StringBuilder();
+		for (TipoProducto tipProTmp : BdMemoria.tipoProductos) {
+			if (tipProTmp != null) {
+				tipoProLis.append(tipProTmp.getIdTipoPro()).append("-").append(tipProTmp.getNombreTipoPro())
+						.append(" !! ");
+			}
+
+		}
+		return tipoProLis.toString();
 	}
 
 }

@@ -13,13 +13,13 @@ import java.util.List;
  */
 public interface InterfazCRUDCollections {
 	
-	public String insertar(Object registro);
-	public String actualizar(Object registro);
-	public String eliminar(Object registro);
+	public String insertar(Object registro)throws Exception;
+	public String actualizar(Object registro)throws Exception;
+	public String eliminar(Object registro)throws Exception;
 	/*
 	 * Con el wildcard ? se devuelve cualquier lista de objetos de algún tipo
 	 * Solo se hace en interfaces
 	 */
-	public List<?> consultarTodos();
+	public List<?> consultarTodos()throws Exception;
 
 }

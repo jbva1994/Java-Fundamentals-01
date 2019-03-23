@@ -3,6 +3,10 @@
  */
 package com.jbva.sportshop.modelo;
 
+import java.util.List;
+
+
+
 /**
  * Clase para representra la tabla del proveedor
  * 
@@ -15,22 +19,29 @@ public class Proveedor {
 	private int idProveedor;
 	private String nombreProv;
 	private String descripcionProv;
+	private List<Producto> productos;
 
 	public Proveedor() {
 
 	}
 
+	
+
 	/**
 	 * @param idProveedor
 	 * @param nombreProv
 	 * @param descripcionProv
+	 * @param productos
 	 */
-	public Proveedor(int idProveedor, String nombreProv, String descripcionProv) {
+	public Proveedor(int idProveedor, String nombreProv, String descripcionProv, List<Producto> productos) {
 		super();
 		this.idProveedor = idProveedor;
 		this.nombreProv = nombreProv;
 		this.descripcionProv = descripcionProv;
+		this.productos = productos;
 	}
+
+
 
 	/**
 	 * @return the idProveedor
@@ -73,8 +84,23 @@ public class Proveedor {
 	public void setDescripcionProv(String descripcionProv) {
 		this.descripcionProv = descripcionProv;
 	}
+	
 
 	
+	/**
+	 * @return the productos
+	 */
+	public List<Producto> getProductos() {
+		return productos;
+	}
+
+	/**
+	 * @param productos the productos to set
+	 */
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
+	}
+
 	@Override
 	public String toString() {
 		return "Proveedor [idProveedor=" + idProveedor + ", nombreProv=" + nombreProv + ", descripcionProv="
